@@ -41,3 +41,13 @@ C:\Users\Barino\Documents\UFJF\Informática Industrial\Trabalho\Informatica indu
 C:\Users\Barino\Documents\UFJF\Informática Industrial\Trabalho\Informatica industrial\emulador\obj\Debug\emulador.FormConfigConex.resources
 C:\Users\Barino\Documents\UFJF\Informática Industrial\Trabalho\Informatica industrial\emulador\obj\Debug\emulador.Properties.Resources.resources
 C:\Users\Barino\Documents\UFJF\Informática Industrial\Trabalho\Informatica industrial\emulador\obj\Debug\emulador.csproj.GenerateResource.Cache
+C:\Users\Barino\Documents\UFJF\Informática Industrial\ENE118A_sistema_distribuido\emulador\emulador\bin\Debug\emulador.exe.config
+C:\Users\Barino\Documents\UFJF\Informática Industrial\ENE118A_sistema_distribuido\emulador\emulador\obj\Debug\emulador.exe
+C:\Users\Barino\Documents\UFJF\Informática Industrial\ENE118A_sistema_distribuido\emulador\emulador\obj\Debug\emulador.pdb
+C:\Users\Barino\Documents\UFJF\Informática Industrial\ENE118A_sistema_distribuido\emulador\emulador\bin\Debug\emulador.exe
+C:\Users\Barino\Documents\UFJF\Informática Industrial\ENE118A_sistema_distribuido\emulador\emulador\bin\Debug\emulador.pdb
+C:\Users\Barino\Documents\UFJF\Informática Industrial\ENE118A_sistema_distribuido\emulador\emulador\obj\Debug\emulador.csprojResolveAssemblyReference.cache
+C:\Users\Barino\Documents\UFJF\Informática Industrial\ENE118A_sistema_distribuido\emulador\emulador\obj\Debug\emulador.Emulador.resources
+C:\Users\Barino\Documents\UFJF\Informática Industrial\ENE118A_sistema_distribuido\emulador\emulador\obj\Debug\emulador.FormConfigConex.resources
+C:\Users\Barino\Documents\UFJF\Informática Industrial\ENE118A_sistema_distribuido\emulador\emulador\obj\Debug\emulador.Properties.Resources.resources
+C:\Users\Barino\Documents\UFJF\Informática Industrial\ENE118A_sistema_distribuido\emulador\emulador\obj\Debug\emulador.csproj.GenerateResource.Cache

@@ -1,1 +1,9 @@
+Emula um reservatório de água com vazão constante de saída e de entrada.
 
+Há um sensor de nível com conexão serial que envia o nível do reservatório quando solicitado ("REQ").
+
+Há uma válvula com conexão serial que abre/fecha com os comandos "ON"/"OFF" e também envia seu estado quando solicitado ("REQ").
+
+O nível inicial do emulador é 9000L.
+O estado inicial da vávula é fechado.
+Seu nível máximo é 15000L.
