@@ -7,7 +7,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using MyClasses;
 using System.IO.Ports;
 using System.Threading;
 
@@ -21,13 +20,14 @@ namespace emulador
         Thread ThreadSerial2;
         public static bool sendData1;
         public static bool sendData2;
-        public static bool valve;
+        public static bool valve = false;
         public static bool close1;
         public static bool close2;
 
-        public static double level = 10000;
+        public static PictureBox valvePic;
 
-        public Vazao vz;
+        public static double level = 9000;
+
         public void enable(object ObjSerial)
         {
             SerialPort SP = (SerialPort)ObjSerial;
@@ -62,7 +62,7 @@ namespace emulador
         public Emulador()
         {
             InitializeComponent();
-            vz = new Vazao(0);
+            valvePic = pictureBox_valve;
         }
 
         private static void serialSensor(object obj)
@@ -189,6 +189,7 @@ namespace emulador
             if (indata == "EOT")
             {
                 Emulador.close1 = true;
+                MessageBox.Show("Sensor teve conexão terminada.");
             }
 
             if (indata == "REQ")
@@ -206,6 +207,7 @@ namespace emulador
             if (indata == "EOT")
             {
                 Emulador.close2 = true;
+                MessageBox.Show("Atuador teve conexão terminada.");
             }
 
             if (indata == "REQ")
@@ -216,11 +218,13 @@ namespace emulador
             if (indata == "ON")
             {
                 Emulador.valve = true;
+                valvePic.Image = Image.FromFile("../../imgs/Open Valve G1.png");
             }
 
             if (indata == "OFF")
             {
                 Emulador.valve = false;
+                valvePic.Image = Image.FromFile("../../imgs/Closed Valve R6.png");
             }
         }
 
@@ -228,12 +232,35 @@ namespace emulador
         {
             if (valve)
             {
-                level = level - 3.14;
+                if(level > 0)
+                    level = level - 3.14;
             }
             else
             {
-                level = level + 2.71;
+                if (level < 15000)
+                    level = level + 2.71;
             }
+
+            med_lb.Text = level.ToString();
+
+            if (level > 12000 && level < 15000)
+            {
+                pictureBox_tank.Image = Image.FromFile("../../imgs/Water Tower Y4.png");
+            }
+            if (level >= 15000)
+            {
+                pictureBox_tank.Image = Image.FromFile("../../imgs/Water Tower R4.png");
+            }
+        }
+
+        private void med_lb_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void pictureBox_tank_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
