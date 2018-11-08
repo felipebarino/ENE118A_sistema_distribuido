@@ -26,7 +26,7 @@ namespace emulador
 
         public static PictureBox valvePic;
 
-        public static double level = 15000;
+        public static double level = 9000;
 
         public void enable(object ObjSerial)
         {
@@ -232,11 +232,13 @@ namespace emulador
         {
             if (valve)
             {
-                level = level - 3.14;
+                if(level > 0)
+                    level = level - 3.14;
             }
             else
             {
-                level = level + 2.71;
+                if (level < 15000)
+                    level = level + 2.71;
             }
 
             med_lb.Text = level.ToString();
@@ -254,6 +256,11 @@ namespace emulador
         private void med_lb_Click(object sender, EventArgs e)
         {
             
+        }
+
+        private void pictureBox_tank_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
