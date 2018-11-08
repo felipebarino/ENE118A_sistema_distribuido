@@ -1,0 +1,43 @@
+C:\Users\jhonatan.brandel\Downloads\emulador\emulador\obj\Debug\emulador.csprojResolveAssemblyReference.cache
+C:\Users\jhonatan.brandel\Downloads\emulador\emulador\obj\Debug\emulador.Emulador.resources
+C:\Users\jhonatan.brandel\Downloads\emulador\emulador\obj\Debug\emulador.FormConfigConex.resources
+C:\Users\jhonatan.brandel\Downloads\emulador\emulador\obj\Debug\emulador.Properties.Resources.resources
+C:\Users\jhonatan.brandel\Downloads\emulador\emulador\obj\Debug\emulador.csproj.GenerateResource.Cache
+C:\Users\jhonatan.brandel\Downloads\emulador\emulador\obj\Debug\emulador.csproj.CoreCompileInputs.cache
+C:\Users\jhonatan.brandel\Downloads\emulador\emulador\bin\Debug\emulador.exe.config
+C:\Users\jhonatan.brandel\Downloads\emulador\emulador\bin\Debug\emulador.exe
+C:\Users\jhonatan.brandel\Downloads\emulador\emulador\bin\Debug\emulador.pdb
+C:\Users\jhonatan.brandel\Downloads\emulador\emulador\obj\Debug\emulador.exe
+C:\Users\jhonatan.brandel\Downloads\emulador\emulador\obj\Debug\emulador.pdb
+Z:\Informática Industrial\Avaliação 2\emulador\emulador\bin\Debug\emulador.exe.config
+Z:\Informática Industrial\Avaliação 2\emulador\emulador\bin\Debug\emulador.exe
+Z:\Informática Industrial\Avaliação 2\emulador\emulador\bin\Debug\emulador.pdb
+Z:\Informática Industrial\Avaliação 2\emulador\emulador\obj\Debug\emulador.csprojResolveAssemblyReference.cache
+Z:\Informática Industrial\Avaliação 2\emulador\emulador\obj\Debug\emulador.Emulador.resources
+Z:\Informática Industrial\Avaliação 2\emulador\emulador\obj\Debug\emulador.FormConfigConex.resources
+Z:\Informática Industrial\Avaliação 2\emulador\emulador\obj\Debug\emulador.Properties.Resources.resources
+Z:\Informática Industrial\Avaliação 2\emulador\emulador\obj\Debug\emulador.csproj.GenerateResource.Cache
+Z:\Informática Industrial\Avaliação 2\emulador\emulador\obj\Debug\emulador.csproj.CoreCompileInputs.cache
+Z:\Informática Industrial\Avaliação 2\emulador\emulador\obj\Debug\emulador.exe
+Z:\Informática Industrial\Avaliação 2\emulador\emulador\obj\Debug\emulador.pdb
+C:\Users\filipe.oliveira\Desktop\Trabalho\Informatica industrial\emulador\bin\Debug\emulador.exe.config
+C:\Users\filipe.oliveira\Desktop\Trabalho\Informatica industrial\emulador\bin\Debug\emulador.exe
+C:\Users\filipe.oliveira\Desktop\Trabalho\Informatica industrial\emulador\bin\Debug\emulador.pdb
+C:\Users\filipe.oliveira\Desktop\Trabalho\Informatica industrial\emulador\obj\Debug\emulador.csprojResolveAssemblyReference.cache
+C:\Users\filipe.oliveira\Desktop\Trabalho\Informatica industrial\emulador\obj\Debug\emulador.Emulador.resources
+C:\Users\filipe.oliveira\Desktop\Trabalho\Informatica industrial\emulador\obj\Debug\emulador.FormConfigConex.resources
+C:\Users\filipe.oliveira\Desktop\Trabalho\Informatica industrial\emulador\obj\Debug\emulador.Properties.Resources.resources
+C:\Users\filipe.oliveira\Desktop\Trabalho\Informatica industrial\emulador\obj\Debug\emulador.csproj.GenerateResource.Cache
+C:\Users\filipe.oliveira\Desktop\Trabalho\Informatica industrial\emulador\obj\Debug\emulador.csproj.CoreCompileInputs.cache
+C:\Users\filipe.oliveira\Desktop\Trabalho\Informatica industrial\emulador\obj\Debug\emulador.exe
+C:\Users\filipe.oliveira\Desktop\Trabalho\Informatica industrial\emulador\obj\Debug\emulador.pdb
+C:\Users\Barino\Documents\UFJF\Informática Industrial\Trabalho\Informatica industrial\emulador\bin\Debug\emulador.exe.config
+C:\Users\Barino\Documents\UFJF\Informática Industrial\Trabalho\Informatica industrial\emulador\obj\Debug\emulador.exe
+C:\Users\Barino\Documents\UFJF\Informática Industrial\Trabalho\Informatica industrial\emulador\obj\Debug\emulador.pdb
+C:\Users\Barino\Documents\UFJF\Informática Industrial\Trabalho\Informatica industrial\emulador\bin\Debug\emulador.exe
+C:\Users\Barino\Documents\UFJF\Informática Industrial\Trabalho\Informatica industrial\emulador\bin\Debug\emulador.pdb
+C:\Users\Barino\Documents\UFJF\Informática Industrial\Trabalho\Informatica industrial\emulador\obj\Debug\emulador.csprojResolveAssemblyReference.cache
+C:\Users\Barino\Documents\UFJF\Informática Industrial\Trabalho\Informatica industrial\emulador\obj\Debug\emulador.Emulador.resources
+C:\Users\Barino\Documents\UFJF\Informática Industrial\Trabalho\Informatica industrial\emulador\obj\Debug\emulador.FormConfigConex.resources
+C:\Users\Barino\Documents\UFJF\Informática Industrial\Trabalho\Informatica industrial\emulador\obj\Debug\emulador.Properties.Resources.resources
+C:\Users\Barino\Documents\UFJF\Informática Industrial\Trabalho\Informatica industrial\emulador\obj\Debug\emulador.csproj.GenerateResource.Cache

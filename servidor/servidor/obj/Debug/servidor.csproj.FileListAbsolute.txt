@@ -1,0 +1,7 @@
+C:\Users\filipe.oliveira\Desktop\Trabalho\Informatica industrial\servidor\servidor\servidor\bin\Debug\servidor.exe.config
+C:\Users\filipe.oliveira\Desktop\Trabalho\Informatica industrial\servidor\servidor\servidor\bin\Debug\servidor.exe
+C:\Users\filipe.oliveira\Desktop\Trabalho\Informatica industrial\servidor\servidor\servidor\bin\Debug\servidor.pdb
+C:\Users\filipe.oliveira\Desktop\Trabalho\Informatica industrial\servidor\servidor\servidor\obj\Debug\servidor.csprojResolveAssemblyReference.cache
+C:\Users\filipe.oliveira\Desktop\Trabalho\Informatica industrial\servidor\servidor\servidor\obj\Debug\servidor.csproj.CoreCompileInputs.cache
+C:\Users\filipe.oliveira\Desktop\Trabalho\Informatica industrial\servidor\servidor\servidor\obj\Debug\servidor.exe
+C:\Users\filipe.oliveira\Desktop\Trabalho\Informatica industrial\servidor\servidor\servidor\obj\Debug\servidor.pdb
