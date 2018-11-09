@@ -5,3 +5,12 @@ C:\Users\filipe.oliveira\Desktop\Trabalho\Informatica industrial\servidor\servid
 C:\Users\filipe.oliveira\Desktop\Trabalho\Informatica industrial\servidor\servidor\servidor\obj\Debug\servidor.csproj.CoreCompileInputs.cache
 C:\Users\filipe.oliveira\Desktop\Trabalho\Informatica industrial\servidor\servidor\servidor\obj\Debug\servidor.exe
 C:\Users\filipe.oliveira\Desktop\Trabalho\Informatica industrial\servidor\servidor\servidor\obj\Debug\servidor.pdb
+Z:\Informática Industrial\Informatica industrial\servidor\servidor\servidor\bin\Debug\servidor.exe.config
+Z:\Informática Industrial\Informatica industrial\servidor\servidor\servidor\bin\Debug\servidor.exe
+Z:\Informática Industrial\Informatica industrial\servidor\servidor\servidor\bin\Debug\servidor.pdb
+Z:\Informática Industrial\Informatica industrial\servidor\servidor\servidor\obj\Debug\servidor.csprojResolveAssemblyReference.cache
+Z:\Informática Industrial\Informatica industrial\servidor\servidor\servidor\obj\Debug\servidor.csproj.CoreCompileInputs.cache
+Z:\Informática Industrial\Informatica industrial\servidor\servidor\servidor\obj\Debug\servidor.exe
+Z:\Informática Industrial\Informatica industrial\servidor\servidor\servidor\obj\Debug\servidor.pdb
+Z:\Informática Industrial\Informatica industrial\servidor\servidor\servidor\bin\Debug\conexao.dll
+Z:\Informática Industrial\Informatica industrial\servidor\servidor\servidor\bin\Debug\conexao.pdb
