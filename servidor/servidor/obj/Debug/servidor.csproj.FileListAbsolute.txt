@@ -23,3 +23,6 @@ C:\Users\jhonatan.brandel\Downloads\Informática Industrial 08112018-20181109T11
 C:\Users\jhonatan.brandel\Downloads\Informática Industrial 08112018-20181109T111723Z-001\Informática Industrial 08112018\Informatica industrial\servidor\servidor\servidor\bin\Debug\servidor.pdb
 C:\Users\jhonatan.brandel\Downloads\Informática Industrial 08112018-20181109T111723Z-001\Informática Industrial 08112018\Informatica industrial\servidor\servidor\servidor\bin\Debug\conexao.dll
 C:\Users\jhonatan.brandel\Downloads\Informática Industrial 08112018-20181109T111723Z-001\Informática Industrial 08112018\Informatica industrial\servidor\servidor\servidor\bin\Debug\conexao.pdb
+C:\Users\Barino\Documents\UFJF\Informática Industrial\ENE118A_sistema_distribuido\servidor\servidor\bin\Debug\servidor.exe.config
+C:\Users\Barino\Documents\UFJF\Informática Industrial\ENE118A_sistema_distribuido\servidor\servidor\obj\Debug\servidor.exe
+C:\Users\Barino\Documents\UFJF\Informática Industrial\ENE118A_sistema_distribuido\servidor\servidor\obj\Debug\servidor.pdb

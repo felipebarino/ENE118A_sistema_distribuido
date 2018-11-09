@@ -13,6 +13,9 @@ using System.IO;
 using System.Collections;
 using System.Runtime.Serialization.Formatters.Binary;
 using System.Runtime.Serialization;
+using conexao;
+using System.Threading;
+
 
 namespace cliente
 {
@@ -23,15 +26,75 @@ namespace cliente
             InitializeComponent();
         }
 
-        private NetworkStream stream;
-        private TcpClient cliente;
+        static TcpClient cliente = new TcpClient();                      //Cria uma nova instância do TcpClient
+        static private NetworkStream stream;
+        static private NetworkStream streamrx;
         private bool valve = false;
+
+        Thread attachServer = new Thread(ServerAttach);
+        public static string lb_lastServerMSGText = "";
+
+        public static void ServerAttach()
+        {
+            BinaryFormatter bfrx = new BinaryFormatter();
+
+            //MemoryStream -> o objeto instanciado será utilizado para armazenar o resultado da serialização
+            MemoryStream msrx = new MemoryStream();
+
+
+            byte[] bufferrx;
+            while (true)
+            {
+                while (cliente.Connected)
+                {
+                    try
+                    {
+                        if (cliente.Available > 0)  //Aguarda até que o cliente envie a mensagem (número de bytes para leitura > 0)
+                        {
+                            bufferrx = new byte[cliente.Available]; //Aloca dinamicamente o buffer que receberá os dados
+                            stream.Read(bufferrx, 0, cliente.Available); //Realiza a leitura do buffer
+
+                            msrx = new MemoryStream(bufferrx); // Instancia um objeto MemoryStream que será utilizado para a deserialização
+                            conexao.conexao conexrx = (conexao.conexao)bfrx.Deserialize(msrx);  //Deserializa o objeto
+                            lb_lastServerMSGText = "Servidor: " + cliente.Client.RemoteEndPoint.ToString() + "\r\n--> Level: " + conexrx.level.ToString("0.00") + "\r\n--> Valve: " + Convert.ToString(conexrx.stateValveGUI);
+                        }
+                    }
+                    catch { }
+                }
+            }
+        }
 
         public void desconectar()
         {
             bt_connect.Text = "CONECTAR";
             lb_status.BackColor = Color.Red;
             stream.Close();
+        }
+
+        public void sendData(bool clientSet, bool serverSet, bool stateValve, bool stateValveGUI, bool clientGetLevel, bool updategui, double level)
+        {
+            try
+            {
+                //Classe definida em MinhaBiblioteca.dll (namespace MinhaBiblioteca)
+                conexao.conexao conex = new conexao.conexao(clientSet, serverSet, stateValve, stateValveGUI, clientGetLevel, updategui, level);
+
+                //Binary Formatter -> classe utilizada para serializar (converter para um array de bytes) o objeto
+                BinaryFormatter bf = new BinaryFormatter();
+
+                //MemoryStream -> o objeto instanciado será utilizado para armazenar o resultado da serialização
+                MemoryStream ms = new MemoryStream();
+
+                //Serialização
+                bf.Serialize(ms, conex);
+                //MessageBox.Show("serializou");
+                //Envio do objeto pela rede
+                stream.Write(ms.ToArray(), 0, ms.ToArray().Length);
+            }
+            catch
+            {
+                MessageBox.Show("Erro ao comunicar com o servidor");
+                this.desconectar();
+            }
         }
 
         private void bt_connect_Click(object sender, EventArgs e)
@@ -57,7 +120,6 @@ namespace cliente
 
         private void conexãoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            cliente = new TcpClient();
             configConex fCC = new configConex(cliente);
             fCC.Show();
         }
@@ -78,7 +140,8 @@ namespace cliente
                 lb_valveState.Text = "Aberta";
                 valve = true;
             }
-            
+    
+            //sendData( clientSet, bool serverSet, bool stateValve, bool stateValveGUI, bool clientGetLevel, bool updategui, double level);
         }
     }
 }
