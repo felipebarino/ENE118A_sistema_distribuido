@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
@@ -39,16 +40,13 @@
             this.bt_connect = new System.Windows.Forms.Button();
             this.med_lb = new System.Windows.Forms.Label();
             this.pictureBox_tank = new System.Windows.Forms.PictureBox();
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.configuraçõesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.conexãoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.sairToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.lb_status = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.lb_level = new System.Windows.Forms.Label();
             this.lb_valve = new System.Windows.Forms.Label();
             this.lb_valveState = new System.Windows.Forms.Label();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
@@ -57,7 +55,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_valve)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_tank)).BeginInit();
-            this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
@@ -144,10 +141,10 @@
             // 
             // bt_connect
             // 
-            this.bt_connect.Location = new System.Drawing.Point(324, 155);
+            this.bt_connect.Location = new System.Drawing.Point(12, 12);
             this.bt_connect.Name = "bt_connect";
             this.bt_connect.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bt_connect.Size = new System.Drawing.Size(75, 23);
+            this.bt_connect.Size = new System.Drawing.Size(107, 23);
             this.bt_connect.TabIndex = 14;
             this.bt_connect.Text = "CONECTAR";
             this.bt_connect.UseVisualStyleBackColor = true;
@@ -176,38 +173,6 @@
             this.pictureBox_tank.TabIndex = 12;
             this.pictureBox_tank.TabStop = false;
             // 
-            // menuStrip1
-            // 
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.configuraçõesToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(418, 24);
-            this.menuStrip1.TabIndex = 15;
-            this.menuStrip1.Text = "menuStrip1";
-            // 
-            // configuraçõesToolStripMenuItem
-            // 
-            this.configuraçõesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.conexãoToolStripMenuItem,
-            this.sairToolStripMenuItem});
-            this.configuraçõesToolStripMenuItem.Name = "configuraçõesToolStripMenuItem";
-            this.configuraçõesToolStripMenuItem.Size = new System.Drawing.Size(96, 20);
-            this.configuraçõesToolStripMenuItem.Text = "Configurações";
-            // 
-            // conexãoToolStripMenuItem
-            // 
-            this.conexãoToolStripMenuItem.Name = "conexãoToolStripMenuItem";
-            this.conexãoToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.conexãoToolStripMenuItem.Text = "Conexão";
-            this.conexãoToolStripMenuItem.Click += new System.EventHandler(this.conexãoToolStripMenuItem_Click);
-            // 
-            // sairToolStripMenuItem
-            // 
-            this.sairToolStripMenuItem.Name = "sairToolStripMenuItem";
-            this.sairToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.sairToolStripMenuItem.Text = "Sair";
-            // 
             // pictureBox2
             // 
             this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
@@ -225,7 +190,7 @@
             this.lb_status.AutoSize = true;
             this.lb_status.BackColor = System.Drawing.Color.Red;
             this.lb_status.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_status.Location = new System.Drawing.Point(384, 181);
+            this.lb_status.Location = new System.Drawing.Point(104, 38);
             this.lb_status.MinimumSize = new System.Drawing.Size(15, 15);
             this.lb_status.Name = "lb_status";
             this.lb_status.Size = new System.Drawing.Size(15, 15);
@@ -236,7 +201,7 @@
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.SystemColors.Control;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(321, 181);
+            this.label3.Location = new System.Drawing.Point(9, 38);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(57, 13);
             this.label3.TabIndex = 24;
@@ -274,6 +239,12 @@
             this.lb_valveState.Text = "Fechada";
             this.lb_valveState.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
+            // timer1
+            // 
+            this.timer1.Enabled = true;
+            this.timer1.Interval = 50;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -295,9 +266,8 @@
             this.Controls.Add(this.bt_connect);
             this.Controls.Add(this.med_lb);
             this.Controls.Add(this.pictureBox_tank);
-            this.Controls.Add(this.menuStrip1);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Cliente";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
@@ -306,8 +276,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_valve)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_tank)).EndInit();
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -326,16 +294,13 @@
         private System.Windows.Forms.Button bt_connect;
         private System.Windows.Forms.Label med_lb;
         private System.Windows.Forms.PictureBox pictureBox_tank;
-        private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem configuraçõesToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem conexãoToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem sairToolStripMenuItem;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label lb_status;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label lb_level;
         private System.Windows.Forms.Label lb_valve;
         private System.Windows.Forms.Label lb_valveState;
+        private System.Windows.Forms.Timer timer1;
     }
 }
 
