@@ -40,36 +40,21 @@ namespace emulador
             SP.PortName = cb_COM.SelectedItem.ToString();
             SP.Parity = (Parity)Enum.Parse(typeof(Parity), cb_paridade.SelectedItem.ToString());
             SP.DataBits = Convert.ToInt32((cb_databits.SelectedItem.ToString()));
-            SP.StopBits = (StopBits)Enum.Parse(typeof(StopBits), cb_stopbit.SelectedItem.ToString());
-
-           
+            SP.StopBits = (StopBits)Enum.Parse(typeof(StopBits), cb_stopbit.SelectedItem.ToString()); 
         }
         public SerialPort sp1;
         
         
-        public FormConfigConex(SerialPort S1)
+        public FormConfigConex(SerialPort S1, String name)
         {
             InitializeComponent();
+
+            this.label6.Text = "Parâmetros da conexão serial com o " + name + ":";
             this.Inicializacao();
             this.sp1 = S1;
         }
 
         private void FormConfigConex_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void comboBox1_SelectedIndexChanged_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void comboBox1_SelectedIndexChanged_2(object sender, EventArgs e)
         {
 
         }

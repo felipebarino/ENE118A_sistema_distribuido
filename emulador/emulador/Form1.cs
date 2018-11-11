@@ -165,13 +165,13 @@ namespace emulador
 
         private void conexãoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FormConfigConex fCC = new FormConfigConex(this.serialPort1);
+            FormConfigConex fCC = new FormConfigConex(this.serialPort1, "sensor");
             fCC.Show();
         }
 
         private void conexãoAtuadorToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FormConfigConex fCC = new FormConfigConex(this.serialPort2);
+            FormConfigConex fCC = new FormConfigConex(this.serialPort2, "atuador");
             fCC.Show();
         }
 
@@ -241,6 +241,11 @@ namespace emulador
                     level = level + 2.71;
             }
 
+            if (level < 0)
+                level = 0;
+            if (level > 15000)
+                level = 15000;
+
             med_lb.Text = level.ToString();
 
             if (level > 12000 && level < 15000)
@@ -250,6 +255,10 @@ namespace emulador
             if (level >= 15000)
             {
                 pictureBox_tank.Image = Image.FromFile("../../imgs/Water Tower R4.png");
+            }
+            if (level <= 12000)
+            {
+                pictureBox_tank.Image = Image.FromFile("../../imgs/Water Tower B4.png");
             }
         }
 
