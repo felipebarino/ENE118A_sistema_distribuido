@@ -5,3 +5,29 @@ C:\Users\filipe.oliveira\Desktop\Trabalho\Informatica industrial\servidor\servid
 C:\Users\filipe.oliveira\Desktop\Trabalho\Informatica industrial\servidor\servidor\servidor\obj\Debug\servidor.csproj.CoreCompileInputs.cache
 C:\Users\filipe.oliveira\Desktop\Trabalho\Informatica industrial\servidor\servidor\servidor\obj\Debug\servidor.exe
 C:\Users\filipe.oliveira\Desktop\Trabalho\Informatica industrial\servidor\servidor\servidor\obj\Debug\servidor.pdb
+Z:\Informática Industrial\Informatica industrial\servidor\servidor\servidor\bin\Debug\servidor.exe.config
+Z:\Informática Industrial\Informatica industrial\servidor\servidor\servidor\bin\Debug\servidor.exe
+Z:\Informática Industrial\Informatica industrial\servidor\servidor\servidor\bin\Debug\servidor.pdb
+Z:\Informática Industrial\Informatica industrial\servidor\servidor\servidor\obj\Debug\servidor.csprojResolveAssemblyReference.cache
+Z:\Informática Industrial\Informatica industrial\servidor\servidor\servidor\obj\Debug\servidor.csproj.CoreCompileInputs.cache
+Z:\Informática Industrial\Informatica industrial\servidor\servidor\servidor\obj\Debug\servidor.exe
+Z:\Informática Industrial\Informatica industrial\servidor\servidor\servidor\obj\Debug\servidor.pdb
+Z:\Informática Industrial\Informatica industrial\servidor\servidor\servidor\bin\Debug\conexao.dll
+Z:\Informática Industrial\Informatica industrial\servidor\servidor\servidor\bin\Debug\conexao.pdb
+C:\Users\jhonatan.brandel\Downloads\Informática Industrial 08112018-20181109T111723Z-001\Informática Industrial 08112018\Informatica industrial\servidor\servidor\servidor\obj\Debug\servidor.csprojResolveAssemblyReference.cache
+C:\Users\jhonatan.brandel\Downloads\Informática Industrial 08112018-20181109T111723Z-001\Informática Industrial 08112018\Informatica industrial\servidor\servidor\servidor\obj\Debug\servidor.csproj.CoreCompileInputs.cache
+C:\Users\jhonatan.brandel\Downloads\Informática Industrial 08112018-20181109T111723Z-001\Informática Industrial 08112018\Informatica industrial\servidor\servidor\servidor\obj\Debug\servidor.exe
+C:\Users\jhonatan.brandel\Downloads\Informática Industrial 08112018-20181109T111723Z-001\Informática Industrial 08112018\Informatica industrial\servidor\servidor\servidor\obj\Debug\servidor.pdb
+C:\Users\jhonatan.brandel\Downloads\Informática Industrial 08112018-20181109T111723Z-001\Informática Industrial 08112018\Informatica industrial\servidor\servidor\servidor\bin\Debug\servidor.exe.config
+C:\Users\jhonatan.brandel\Downloads\Informática Industrial 08112018-20181109T111723Z-001\Informática Industrial 08112018\Informatica industrial\servidor\servidor\servidor\bin\Debug\servidor.exe
+C:\Users\jhonatan.brandel\Downloads\Informática Industrial 08112018-20181109T111723Z-001\Informática Industrial 08112018\Informatica industrial\servidor\servidor\servidor\bin\Debug\servidor.pdb
+C:\Users\jhonatan.brandel\Downloads\Informática Industrial 08112018-20181109T111723Z-001\Informática Industrial 08112018\Informatica industrial\servidor\servidor\servidor\bin\Debug\conexao.dll
+C:\Users\jhonatan.brandel\Downloads\Informática Industrial 08112018-20181109T111723Z-001\Informática Industrial 08112018\Informatica industrial\servidor\servidor\servidor\bin\Debug\conexao.pdb
+C:\Users\Barino\Documents\UFJF\Informática Industrial\ENE118A_sistema_distribuido\servidor\servidor\bin\Debug\servidor.exe.config
+C:\Users\Barino\Documents\UFJF\Informática Industrial\ENE118A_sistema_distribuido\servidor\servidor\obj\Debug\servidor.exe
+C:\Users\Barino\Documents\UFJF\Informática Industrial\ENE118A_sistema_distribuido\servidor\servidor\obj\Debug\servidor.pdb
+C:\Users\Barino\Documents\UFJF\Informática Industrial\ENE118A_sistema_distribuido\servidor\servidor\obj\Debug\servidor.csprojResolveAssemblyReference.cache
+C:\Users\Barino\Documents\UFJF\Informática Industrial\ENE118A_sistema_distribuido\servidor\servidor\bin\Debug\servidor.exe
+C:\Users\Barino\Documents\UFJF\Informática Industrial\ENE118A_sistema_distribuido\servidor\servidor\bin\Debug\servidor.pdb
+C:\Users\Barino\Documents\UFJF\Informática Industrial\ENE118A_sistema_distribuido\servidor\servidor\bin\Debug\conexao.dll
+C:\Users\Barino\Documents\UFJF\Informática Industrial\ENE118A_sistema_distribuido\servidor\servidor\bin\Debug\conexao.pdb
