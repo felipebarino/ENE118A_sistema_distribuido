@@ -26,3 +26,8 @@ C:\Users\jhonatan.brandel\Downloads\Informática Industrial 08112018-20181109T11
 C:\Users\Barino\Documents\UFJF\Informática Industrial\ENE118A_sistema_distribuido\servidor\servidor\bin\Debug\servidor.exe.config
 C:\Users\Barino\Documents\UFJF\Informática Industrial\ENE118A_sistema_distribuido\servidor\servidor\obj\Debug\servidor.exe
 C:\Users\Barino\Documents\UFJF\Informática Industrial\ENE118A_sistema_distribuido\servidor\servidor\obj\Debug\servidor.pdb
+C:\Users\Barino\Documents\UFJF\Informática Industrial\ENE118A_sistema_distribuido\servidor\servidor\obj\Debug\servidor.csprojResolveAssemblyReference.cache
+C:\Users\Barino\Documents\UFJF\Informática Industrial\ENE118A_sistema_distribuido\servidor\servidor\bin\Debug\servidor.exe
+C:\Users\Barino\Documents\UFJF\Informática Industrial\ENE118A_sistema_distribuido\servidor\servidor\bin\Debug\servidor.pdb
+C:\Users\Barino\Documents\UFJF\Informática Industrial\ENE118A_sistema_distribuido\servidor\servidor\bin\Debug\conexao.dll
+C:\Users\Barino\Documents\UFJF\Informática Industrial\ENE118A_sistema_distribuido\servidor\servidor\bin\Debug\conexao.pdb

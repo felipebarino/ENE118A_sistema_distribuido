@@ -39,7 +39,7 @@
             // 
             this.bt_connect.Location = new System.Drawing.Point(12, 80);
             this.bt_connect.Name = "bt_connect";
-            this.bt_connect.Size = new System.Drawing.Size(207, 23);
+            this.bt_connect.Size = new System.Drawing.Size(254, 23);
             this.bt_connect.TabIndex = 9;
             this.bt_connect.Text = "CONECTAR";
             this.bt_connect.UseVisualStyleBackColor = true;
@@ -49,14 +49,14 @@
             // 
             this.tb_porta.Location = new System.Drawing.Point(62, 46);
             this.tb_porta.Name = "tb_porta";
-            this.tb_porta.Size = new System.Drawing.Size(157, 20);
+            this.tb_porta.Size = new System.Drawing.Size(204, 20);
             this.tb_porta.TabIndex = 8;
             // 
             // tb_ip
             // 
             this.tb_ip.Location = new System.Drawing.Point(43, 12);
             this.tb_ip.Name = "tb_ip";
-            this.tb_ip.Size = new System.Drawing.Size(176, 20);
+            this.tb_ip.Size = new System.Drawing.Size(223, 20);
             this.tb_ip.TabIndex = 7;
             // 
             // label2
@@ -81,7 +81,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(231, 115);
+            this.ClientSize = new System.Drawing.Size(278, 115);
             this.Controls.Add(this.bt_connect);
             this.Controls.Add(this.tb_porta);
             this.Controls.Add(this.tb_ip);
