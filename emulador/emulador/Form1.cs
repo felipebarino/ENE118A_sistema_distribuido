@@ -24,6 +24,8 @@ namespace emulador
         public static bool close1;
         public static bool close2;
 
+        public static Image openGreen, closedRed, waterBlue, waterYellow, waterRed;
+
         public static PictureBox valvePic;
 
         public static double level = 9000;
@@ -63,6 +65,12 @@ namespace emulador
         {
             InitializeComponent();
             valvePic = pictureBox_valve;
+
+            openGreen = Image.FromFile("../../imgs/Open Valve G1.png"); 
+            closedRed = Image.FromFile("../../imgs/Closed Valve R6.png"); 
+            waterBlue = Image.FromFile("../../imgs/Water Tower B4.png");
+            waterYellow = Image.FromFile("../../imgs/Water Tower Y4.png");
+            waterRed = Image.FromFile("../../imgs/Water Tower R4.png");
         }
 
         private static void serialSensor(object obj)
@@ -218,13 +226,13 @@ namespace emulador
             if (indata == "ON")
             {
                 Emulador.valve = true;
-                valvePic.Image = Image.FromFile("../../imgs/Open Valve G1.png");
+                valvePic.Image = openGreen;
             }
 
             if (indata == "OFF")
             {
                 Emulador.valve = false;
-                valvePic.Image = Image.FromFile("../../imgs/Closed Valve R6.png");
+                valvePic.Image = closedRed;
             }
         }
 
@@ -250,15 +258,15 @@ namespace emulador
 
             if (level > 12000 && level < 15000)
             {
-                pictureBox_tank.Image = Image.FromFile("../../imgs/Water Tower Y4.png");
+                pictureBox_tank.Image = waterYellow;
             }
             if (level >= 15000)
             {
-                pictureBox_tank.Image = Image.FromFile("../../imgs/Water Tower R4.png");
+                pictureBox_tank.Image = waterRed;
             }
             if (level <= 12000)
             {
-                pictureBox_tank.Image = Image.FromFile("../../imgs/Water Tower B4.png");
+                pictureBox_tank.Image = waterBlue;
             }
         }
 

@@ -26,7 +26,12 @@ namespace cliente
         static bool valveGUI = false;
         static double levelGUI = 0.0;
 
+        private int cont = 0;
+        private const int windowSize = 900;
+
         static private bool waitingServer = true;
+
+        private Image openGray, openGreen, closedGray, closedRed, waterBlue, waterYellow, waterRed;
 
         Thread attachServer;
 
@@ -35,9 +40,44 @@ namespace cliente
             InitializeComponent();
             med_lb.Text = " ";
             lb_valveState.Text = " ";
-            pictureBox_valve.Image = Image.FromFile("../../imgs/Closed Valve GR6.png");
+
+            closedGray = Image.FromFile("../../imgs/Closed Valve GR6.png");
+            openGray = Image.FromFile("../../imgs/Open Valve GR6.png");
+            openGreen = Image.FromFile("../../imgs/Open Valve G1.png");
+            closedRed = Image.FromFile("../../imgs/Closed Valve R6.png");
+            waterBlue = Image.FromFile("../../imgs/Water Tower B4.png");
+            waterYellow = Image.FromFile("../../imgs/Water Tower Y4.png"); ;
+            waterRed = Image.FromFile("../../imgs/Water Tower R4.png");
+
+            pictureBox_valve.Image = closedGray;
+
+            this.Width = 440;
+            graph.Visible = false;
+            graph_btn.Text = "MOSTRAR GRÁFICO";
         }
 
+        ~Form1()
+        {
+            this.desconectar();
+        }
+
+        private void graph_btn_Click(object sender, EventArgs e)
+        {
+            if(graph_btn.Text == "MOSTRAR GRÁFICO")
+            {
+                this.Width = 580;
+                graph.Visible = true;
+                graph_btn.Text = "OCULTAR GRÁFICO";
+
+            }
+            else
+            {
+                this.Width = 440;
+                graph.Visible = false;
+                graph_btn.Text = "MOSTRAR GRÁFICO";
+            }
+            
+        }
 
         public static void ServerAttach()
         {
@@ -64,6 +104,7 @@ namespace cliente
                             {
                                 levelGUI = conexrx.level;
                                 valveGUI = conexrx.stateValveGUI;
+
                                 waitingServer = false;
                             }
                         }
@@ -141,13 +182,14 @@ namespace cliente
             bool clientGetLevel = true;
             bool updategui = false;
             double level = 0.0;
+
             sendData(clientSet, serverSet, !valveGUI, valveGUI, clientGetLevel, updategui, level);
 
             lb_valveState.Text = "Atuando ...";
             if (valveGUI)
-                pictureBox_valve.Image = Image.FromFile("../../imgs/Open Valve GR6.png");
+                pictureBox_valve.Image = openGray;
             else
-                pictureBox_valve.Image = Image.FromFile("../../imgs/Closed Valve GR6.png");
+                pictureBox_valve.Image = closedGray;
 
             waitingServer = true;
         }
@@ -158,35 +200,45 @@ namespace cliente
             {
                 if (valveGUI)
                 {
-                    pictureBox_valve.Image = Image.FromFile("../../imgs/Open Valve G1.png");
+                    pictureBox_valve.Image = openGreen;
                     lb_valveState.Text = "Aberta";
                 }
                 else
                 {
-                    pictureBox_valve.Image = Image.FromFile("../../imgs/Closed Valve R6.png");
+                    pictureBox_valve.Image = closedRed;
                     lb_valveState.Text = "Fechada";
                 }
 
                 med_lb.Text = levelGUI.ToString() + "L";
+
+                if (cont > windowSize)
+                {
+                    graph.Series[0].Points.RemoveAt(0);
+                    graph.Series[0].Points.AddXY(DateTime.Now.Hour.ToString() + ":" + DateTime.Now.Minute.ToString(), levelGUI);
+                    graph.ResetAutoValues();
+                }
+                else
+                {
+                    graph.Series[0].Points.AddXY(DateTime.Now.Hour.ToString() + ":" + DateTime.Now.Minute.ToString(), levelGUI);
+                    graph.ResetAutoValues();
+                    cont++;
+                }
 
                 waitingServer = true;
             }
 
             if (levelGUI > 12000 && levelGUI < 15000)
             {
-                pictureBox_tank.Image = Image.FromFile("../../imgs/Water Tower Y4.png");
+                pictureBox_tank.Image = waterYellow;
             }
             if (levelGUI >= 15000)
             {
-                pictureBox_tank.Image = Image.FromFile("../../imgs/Water Tower R4.png");
+                pictureBox_tank.Image = waterRed;
             }
             if (levelGUI <= 12000)
             {
-                pictureBox_tank.Image = Image.FromFile("../../imgs/Water Tower B4.png");
+                pictureBox_tank.Image = waterBlue;
             }
-
         }
-
-
     }
 }

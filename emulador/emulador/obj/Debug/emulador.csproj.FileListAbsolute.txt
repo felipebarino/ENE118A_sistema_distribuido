@@ -51,3 +51,14 @@ C:\Users\Barino\Documents\UFJF\Informática Industrial\ENE118A_sistema_distribui
 C:\Users\Barino\Documents\UFJF\Informática Industrial\ENE118A_sistema_distribuido\emulador\emulador\obj\Debug\emulador.FormConfigConex.resources
 C:\Users\Barino\Documents\UFJF\Informática Industrial\ENE118A_sistema_distribuido\emulador\emulador\obj\Debug\emulador.Properties.Resources.resources
 C:\Users\Barino\Documents\UFJF\Informática Industrial\ENE118A_sistema_distribuido\emulador\emulador\obj\Debug\emulador.csproj.GenerateResource.Cache
+Z:\ENE118A_sistema_distribuido-master\emulador\emulador\bin\Debug\emulador.exe.config
+Z:\ENE118A_sistema_distribuido-master\emulador\emulador\bin\Debug\emulador.exe
+Z:\ENE118A_sistema_distribuido-master\emulador\emulador\bin\Debug\emulador.pdb
+Z:\ENE118A_sistema_distribuido-master\emulador\emulador\obj\Debug\emulador.csprojResolveAssemblyReference.cache
+Z:\ENE118A_sistema_distribuido-master\emulador\emulador\obj\Debug\emulador.Emulador.resources
+Z:\ENE118A_sistema_distribuido-master\emulador\emulador\obj\Debug\emulador.FormConfigConex.resources
+Z:\ENE118A_sistema_distribuido-master\emulador\emulador\obj\Debug\emulador.Properties.Resources.resources
+Z:\ENE118A_sistema_distribuido-master\emulador\emulador\obj\Debug\emulador.csproj.GenerateResource.Cache
+Z:\ENE118A_sistema_distribuido-master\emulador\emulador\obj\Debug\emulador.csproj.CoreCompileInputs.cache
+Z:\ENE118A_sistema_distribuido-master\emulador\emulador\obj\Debug\emulador.exe
+Z:\ENE118A_sistema_distribuido-master\emulador\emulador\obj\Debug\emulador.pdb

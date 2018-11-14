@@ -16,48 +16,55 @@ namespace ConsoleApplication1
     class Program
     {
         private static bool ServidorAtivo = false;
-        static ParameterizedThreadStart delSerial1 = new ParameterizedThreadStart(reqSensor);
+        static ParameterizedThreadStart delSerial1 = new ParameterizedThreadStart(reqSensor);// DELEGATE para enviar requisição
         static Thread Threadreq;// thread que fará requisições sincronas para objeto serial
         static ParameterizedThreadStart delTemp = new ParameterizedThreadStart(timerTick);
         static Thread temporizer;
         //flags para controle da válvula
         static bool timerFlag = false;// fla que habilita o envio de estado da válvula para os cientes atualizarem suas telas
-        static bool intention_setValve=false;// flag que sinaliza a intenção do cliente em alterar o valor da valvula
+        static bool intention_setValve = false;// flag que sinaliza a intenção do cliente em alterar o valor da valvula
         static int flag_anti_burrice = 0;// flag que impede mudanças de estados rápidas, que poderiam danificar a válvula
         static int fab_max_cont = 3;//tempo morto da válvula, que impede mudança de estado
 
         static StreamWriter sw;
-        static  bool stateValve;
+        static bool stateValve;
         static double nivel;
-       
-       private static void timerTick(object objport)
-        {   SerialPort sp = (SerialPort)objport;
+
+        private static void timerTick(object objport)
+        {
+            SerialPort sp = (SerialPort)objport;
 
             while (true)
             {
-                 timerFlag = true;
+                timerFlag = true;
                 Thread.Sleep(50);
-                 timerFlag = false;
-                 Thread.Sleep(150);
-                 flag_anti_burrice++;
+                timerFlag = false;
+                Thread.Sleep(150);
+                flag_anti_burrice++;
                 // para que o contador flag_anti_burrice não estoure
                 if (flag_anti_burrice > 100000)
-                     flag_anti_burrice = 100000;
+                    flag_anti_burrice = 100000;
 
                 //se  há intenção e o contador já contou tempo suficiente, então confere a variável static stateValve e envia novo estado para o atuador
-                 if (intention_setValve && (flag_anti_burrice > fab_max_cont))
-                 {
-                     if(stateValve)
-                     sp.WriteLine("ON");
-                     else
-                     sp.WriteLine("OFF");
-
-                     intention_setValve = false; //desabilita flag de intenção
+                if (intention_setValve && (flag_anti_burrice > fab_max_cont))
+                {
+                    try
+                    {
+                        if (stateValve)
+                            sp.WriteLine("ON");
+                        else
+                            sp.WriteLine("OFF");
+                    }
+                    catch
+                    {
+                        Console.WriteLine("Falha ao comunicar com o sensor");
+                    }
+                    intention_setValve = false; //desabilita flag de intenção
                     flag_anti_burrice = 0; // para novamente impedir sucessivas mudanças de estado
-                    
-                 }
 
-                
+                }
+
+
             }
 
         }
@@ -76,7 +83,7 @@ namespace ConsoleApplication1
                 Thread.Sleep(1000);
             }
         }
-        
+
         public static bool flag_send = true;
         private static void TratamentodeDados(object sender, SerialDataReceivedEventArgs e)
         {
@@ -86,7 +93,7 @@ namespace ConsoleApplication1
 
             try
             {
-                
+
                 if (indata == "EOT")
                 {
                     Console.WriteLine("Sensor finalizou a transmissão de dados");
@@ -95,11 +102,11 @@ namespace ConsoleApplication1
                 {
                     nivel = Convert.ToDouble(indata);
                     indata = indata.Replace(",", ".");
-                    Console.WriteLine(" " + System.DateTime.Now + " " + indata + "L");
-                                                      
+                    Console.WriteLine(" " + DateTime.Now + " " + indata + "L");
+
                     using (StreamWriter w = File.AppendText("dadosout.txt"))
-                    {   
-                        w.WriteLine(System.DateTime.Now + "," +  indata);
+                    {
+                        w.WriteLine(DateTime.Now + "," + indata);
                         w.Close();
                     }
                 }
@@ -126,10 +133,10 @@ namespace ConsoleApplication1
         {
             TcpClient cliente = (TcpClient)Objcliente;
             NetworkStream stream;
-            conexao.conexao conex = new conexao.conexao(false,false,false,false,false,false,0);          //Instância da classe conexao, recebe os dados dos clientes e alterações são realizadas simutalneamente
+            conexao.conexao conex = new conexao.conexao(false, false, false, false, false, false, 0);          //Instância da classe conexao, recebe os dados dos clientes e alterações são realizadas simutalneamente
             BinaryFormatter bf = new BinaryFormatter(); //Classe para deserializar
             byte[] buffer;     //Array de bytes, que será utilizado para receber o stream proveniente da comunicação TCP IP
-            
+
             bool flag_level = false;
             Console.WriteLine(System.DateTime.Now.ToString() + " - Cliente " + cliente.Client.RemoteEndPoint.ToString() + " Conectado - Atendendo requisições");
 
@@ -147,23 +154,23 @@ namespace ConsoleApplication1
                         MemoryStream ms = new MemoryStream(buffer); // Instancia um objeto MemoryStream que será utilizado para a deserialização
                         conex = (conexao.conexao)bf.Deserialize(ms);  //Deserializa o objeto
 
-                        if(conex.clientSet)
+                        if (conex.clientSet)
                         {
                             stateValve = conex.stateValve;
                             intention_setValve = true;
                         }
-                        if(conex.clientGetLevel)
+                        if (conex.clientGetLevel)
                         {
                             flag_level = true;
                         }
 
-                        Console.WriteLine("Cliente: " + cliente.Client.RemoteEndPoint.ToString() +"--> clientSet: "+conex.clientSet.ToString()+" stateValve: "+conex.stateValve+"clientGetLevel: "+conex.clientGetLevel);
-                      
+                        Console.WriteLine("Cliente: " + cliente.Client.RemoteEndPoint.ToString() + "--> clientSet: " + conex.clientSet.ToString() + " stateValve: " + conex.stateValve + "clientGetLevel: " + conex.clientGetLevel);
+
                     }
 
                     if (flag_level)
                     {
-                        conex.serverSet =true;
+                        conex.serverSet = true;
                         conex.level = nivel;
                         conex.updateGUI = true;
                         conex.stateValveGUI = stateValve;
@@ -195,7 +202,7 @@ namespace ConsoleApplication1
                         stream.Write(ms2.ToArray(), 0, ms2.ToArray().Length);
                         flag_level = false;
                     }
-                    
+
                 }
                 catch (SystemException ex)
                 {
@@ -210,9 +217,6 @@ namespace ConsoleApplication1
             cliente.Close();
             stream.Close();
             Console.WriteLine(System.DateTime.Now.ToString() + " - Cliente Desconectado");
-
-
-
         }
 
         private static bool IsDead(Thread T)
@@ -244,9 +248,6 @@ namespace ConsoleApplication1
                     ListThread[ListThread.Count - 1].Start(cliente);
 
                 }
-
-
-
             }
         }
 
@@ -268,9 +269,9 @@ namespace ConsoleApplication1
             Threadreq = new Thread(delSerial1);
             Threadreq.Start(S1);
             Thread ServidorT = new Thread(ServerHandler);
-            
-            temporizer =new Thread(delTemp);
-            temporizer.Start(S2);
+
+            temporizer = new Thread(delTemp);// inicializa thread temporizada para fazer requisições ao sensor serial
+            temporizer.Start(S2);// thread que atua na valvula e é temporizada
 
             try
             {
@@ -284,29 +285,23 @@ namespace ConsoleApplication1
             {
                 Console.WriteLine("Porta serial inválida");
             }
-            if (S1.IsOpen)
+            if (S2.IsOpen)
             {
-                
-                    if (flag_send)
-                    {
-                        S2.WriteLine("OFF");
-                        flag_send = false;
-                    }
-                
+
+                if (flag_send)
+                {
+                    S2.WriteLine("OFF");
+                    flag_send = false;
+                }
             }
-                
+            ServidorAtivo = true;
+            ServidorT.Start();
+            while (!Console.KeyAvailable) { }
+            S1.Close();
+            S2.Close();
+            ServidorAtivo = false;
 
-                ServidorAtivo = true;
-                ServidorT.Start();
-            while (true) { }
-              S1.Close();
-              S2.Close();
-              ServidorAtivo = false;
-
-                Environment.Exit(0);
-             
-                
-            
+            Environment.Exit(0);
         }
     }
 }
