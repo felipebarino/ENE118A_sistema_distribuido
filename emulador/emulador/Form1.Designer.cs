@@ -80,7 +80,7 @@
             this.med_lb.Name = "med_lb";
             this.med_lb.Size = new System.Drawing.Size(79, 28);
             this.med_lb.TabIndex = 1;
-            this.med_lb.Text = "opa";
+            this.med_lb.Text = "nível";
             this.med_lb.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.med_lb.Click += new System.EventHandler(this.med_lb_Click);
             // 

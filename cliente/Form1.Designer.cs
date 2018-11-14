@@ -30,6 +30,9 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title1 = new System.Windows.Forms.DataVisualization.Charting.Title();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
@@ -47,6 +50,8 @@
             this.lb_valve = new System.Windows.Forms.Label();
             this.lb_valveState = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.graph_btn = new System.Windows.Forms.Button();
+            this.graph = new System.Windows.Forms.DataVisualization.Charting.Chart();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
@@ -56,6 +61,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_tank)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.graph)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox7
@@ -245,11 +251,43 @@
             this.timer1.Interval = 50;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // graph_btn
+            // 
+            this.graph_btn.Location = new System.Drawing.Point(252, 429);
+            this.graph_btn.Name = "graph_btn";
+            this.graph_btn.Size = new System.Drawing.Size(147, 23);
+            this.graph_btn.TabIndex = 29;
+            this.graph_btn.Text = "MOSTRAR GRÁFICO";
+            this.graph_btn.UseVisualStyleBackColor = true;
+            this.graph_btn.Click += new System.EventHandler(this.graph_btn_Click);
+            // 
+            // graph
+            // 
+            this.graph.BackColor = System.Drawing.Color.Transparent;
+            this.graph.BorderlineColor = System.Drawing.Color.Transparent;
+            chartArea1.Name = "ChartArea1";
+            this.graph.ChartAreas.Add(chartArea1);
+            this.graph.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.graph.Location = new System.Drawing.Point(252, 142);
+            this.graph.Name = "graph";
+            this.graph.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            series1.ChartArea = "ChartArea1";
+            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series1.Name = "Nível";
+            this.graph.Series.Add(series1);
+            this.graph.Size = new System.Drawing.Size(297, 253);
+            this.graph.TabIndex = 30;
+            this.graph.Text = "chart1";
+            title1.Name = "Nível";
+            this.graph.Titles.Add(title1);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(418, 470);
+            this.ClientSize = new System.Drawing.Size(564, 462);
+            this.Controls.Add(this.graph);
+            this.Controls.Add(this.graph_btn);
             this.Controls.Add(this.lb_valve);
             this.Controls.Add(this.lb_valveState);
             this.Controls.Add(this.lb_level);
@@ -277,6 +315,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_tank)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.graph)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -301,6 +340,8 @@
         private System.Windows.Forms.Label lb_valve;
         private System.Windows.Forms.Label lb_valveState;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Button graph_btn;
+        private System.Windows.Forms.DataVisualization.Charting.Chart graph;
     }
 }
 

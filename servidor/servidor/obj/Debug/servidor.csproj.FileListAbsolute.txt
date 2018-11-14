@@ -31,3 +31,12 @@ C:\Users\Barino\Documents\UFJF\Informática Industrial\ENE118A_sistema_distribui
 C:\Users\Barino\Documents\UFJF\Informática Industrial\ENE118A_sistema_distribuido\servidor\servidor\bin\Debug\servidor.pdb
 C:\Users\Barino\Documents\UFJF\Informática Industrial\ENE118A_sistema_distribuido\servidor\servidor\bin\Debug\conexao.dll
 C:\Users\Barino\Documents\UFJF\Informática Industrial\ENE118A_sistema_distribuido\servidor\servidor\bin\Debug\conexao.pdb
+Z:\ENE118A_sistema_distribuido-master\servidor\servidor\bin\Debug\servidor.exe.config
+Z:\ENE118A_sistema_distribuido-master\servidor\servidor\bin\Debug\servidor.exe
+Z:\ENE118A_sistema_distribuido-master\servidor\servidor\bin\Debug\servidor.pdb
+Z:\ENE118A_sistema_distribuido-master\servidor\servidor\bin\Debug\conexao.dll
+Z:\ENE118A_sistema_distribuido-master\servidor\servidor\bin\Debug\conexao.pdb
+Z:\ENE118A_sistema_distribuido-master\servidor\servidor\obj\Debug\servidor.csprojResolveAssemblyReference.cache
+Z:\ENE118A_sistema_distribuido-master\servidor\servidor\obj\Debug\servidor.csproj.CoreCompileInputs.cache
+Z:\ENE118A_sistema_distribuido-master\servidor\servidor\obj\Debug\servidor.exe
+Z:\ENE118A_sistema_distribuido-master\servidor\servidor\obj\Debug\servidor.pdb
